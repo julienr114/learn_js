@@ -7,12 +7,6 @@
     components: {
       AnswerInput
     },
-    props: {
-      operator: {
-        type: Object,
-        required: true
-      }
-    },
     data () {
       return {
         state: 'inprogress',
@@ -20,26 +14,24 @@
       }
     },
     created () {
+      let operator = this.$parent.operatorsByLevel[this.$parent.level][Math.floor(Math.random() * this.$parent.operatorsByLevel[this.$parent.level].length) + 1]
       this.challenge = new Operator (
-        this.operator.name,
-        this.operator.level,
-        this.operator.variables,
-        this.operator.template,
-        this.operator.result
+        operator.name,
+        operator.level,
+        operator.variables,
+        operator.template,
+        operator.result
       )
     },
     methods: {
       submit (input) {
+        this.$parent.step++
         if(this.challenge.result === input) {
           this.state = "good"
-          this.$parent.step++
-          this.$parent.level++
+          this.$parent.goodAnswer()
         } else {
           this.state = "bad"
-          this.$parent.step++
-          if (this.$parent.level < 0) {
-            this.$parent.level--
-          }
+          this.$parent.badAnswer()
         }
       }
     }
