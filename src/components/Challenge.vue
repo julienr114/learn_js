@@ -55,7 +55,7 @@
         <i v-if="state === 'bad'" class="fa fa-times" aria-hidden="true"></i>
       </span>
     </div>
-    <pre v-highlightjs="sourcecode">
+    <pre v-highlightjs="challenge.template">
       <code class="javascript">
         {{ challenge.template }}
       </code>
