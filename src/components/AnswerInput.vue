@@ -23,7 +23,7 @@
       inputForTemplate () {
         if (this.input === '') {
           return "''"
-        } else if (/^\d+$/.test(this.input)) {
+        } else if (!isNaN(this.input)) {
           return parseInt(this.input)
         } else {
           return "'" + this.input + "'"
@@ -56,12 +56,35 @@
       @click="submit",
       v-if="inProgress"
     ) >
-    .success(v-if="good") {{ inputForTemplate }}
-    .error(v-if="bad") {{ inputForTemplate }} => {{ answer }}
+    code
+      span.success(v-if="good") {{ inputForTemplate }}
+      span.error(v-if="bad")
+        span.answer {{ inputForTemplate }}
+        span.icon.arrow
+          i.fa.fa-long-arrow-right(aria-hidden="true")
+        span.correction {{ answer }}
 </template>
 
 <style scoped>
+code {
+  font-size: 16px;
+  background-color: transparent;
+  padding-left: 0px; 
+}
 .control.has-addons .input {
   width: 100%
+}
+.success {
+  color: #34B6AF;
+}
+.error .answer {
+  color: #FAB;
+}
+.error .arrow {
+  color: #bdc3c7;
+  margin: 0 5px;
+}
+.error .correction {
+  color: #E22968;
 }
 </style>

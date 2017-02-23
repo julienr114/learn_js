@@ -34,12 +34,13 @@
     },
     methods: {
       submit (input) {
-        this.$parent.step++
+
         if(this.challenge.result === input) {
           this.state = "good"
           this.$parent.goodAnswer()
         } else {
           this.state = "bad"
+          this.$parent.step++
           this.$parent.badAnswer()
         }
       }
@@ -55,11 +56,11 @@
         <i v-if="state === 'bad'" class="fa fa-times" aria-hidden="true"></i>
       </span>
     </div>
-    <pre v-highlightjs="challenge.template">
+    <span v-highlightjs>
       <code class="javascript">
         {{ challenge.template }}
       </code>
-    </pre>
+    </span>
     <answer-input :state="state" :answer="challenge.result"></answer-input>
   </div>
 </template>
@@ -83,7 +84,7 @@
     top: 0;
     right: 0;
     color: white;
-    padding: 15px;
+    padding: 7px;
     border-top-right-radius: 5px;
   }
   .state.good {
