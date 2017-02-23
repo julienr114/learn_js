@@ -1,10 +1,8 @@
 <template lang="pug">
   #app
-    nav.nav.has-shadow
-      .nav-left
-        .nav-item
-          img(src="./assets/logo_js.png", )
-          span.logo LearnJS
+    .menu
+      .logo
+        img(src="./assets/logo_js.png", )
     .container
       .challenge-container
         challenge(v-for="i in step", :key="i")
@@ -63,8 +61,17 @@ export default {
 </script>
 
 <style>
+  .menu {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+  }
+  .menu .logo img {
+    width: 50px;
+  }
   .challenge-container {
-    margin-top: 30px;
+    margin: 100px 5px 0 5px;
     max-width: 600px;
   }
 </style>
