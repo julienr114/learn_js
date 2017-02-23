@@ -9,43 +9,22 @@
   {
     "name": "subtraction",
     "level": 1,
-    "variables": ["(Math.floor(Math.random() * 6) + 1)", "(Math.floor(Math.random() * 6) + 1)"],
+    "variables": ["(Math.floor(Math.random() * 12) + 1)", "(Math.floor(Math.random() * 6) + 1)"],
     "template": "(function (variables) { return variables[0] + ' - ' + variables[1] })",
-    "result": "(function (variables) { return variables[0] })"
+    "result": "(function (variables) { return variables[0] - variables[1] })"
   },
   {
     "name": "multiplication",
-    "level": 1,
-    "variables": ["(Math.floor(Math.random() * 6) + 1)", "(Math.floor(Math.random() * 6) + 1)"],
+    "level": 2,
+    "variables": ["(Math.floor(Math.random() * 10) + 1)", "(Math.floor(Math.random() * 10) + 1)"],
     "template": "(function (variables) { return variables[0] + ' * ' + variables[1] })",
     "result": "(function (variables) { return variables[0] * variables[1] })"
   },
   {
     "name": "division",
-    "level": 1,
-    "variables": ["(Math.floor(Math.random() * 6) + 1)", "(Math.floor(Math.random() * 6) + 1)"],
+    "level": 2,
+    "variables": ["(Math.floor( Math.random() * 6 / 2 ) * 2 + 6)", 2],
     "template": "(function (variables) { return variables[0] + ' / ' + variables[1] })",
     "result": "(function (variables) { return variables[0] / variables[1] })"
-  },
-  {
-    "name": "modulus",
-    "level": 3,
-    "variables": ["(Math.floor(Math.random() * 6) + 1)", "(Math.floor(Math.random() * 6) + 1)"],
-    "template": "(function (variables) { return variables[0] + ' % ' + variables[1] })",
-    "result": "(function (variables) { return variables[0] % variables[1] })"
-  },
-  {
-   "name": "increment",
-    "level": 2,
-    "variables": ["(Math.floor(Math.random() * 6) + 1)"],
-    "template": "(function (a) { return variables[0] + '++' })",
-    "result": "(function (a) { return variables[0]++ })"
-  },
-  {
-    "name": "decrement",
-    "level": 2,
-    "variables": ["(Math.floor(Math.random() * 6) + 1)"],
-    "template": "(function (a) { return variables[0] + '--' })",
-    "result": "(function (variables) { return variables[0]++ })"
   }
 ]

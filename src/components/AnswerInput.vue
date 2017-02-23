@@ -19,6 +19,15 @@
       },
       bad () {
         return this.state === 'bad'
+      },
+      inputForTemplate () {
+        if (this.input === '') {
+          return "''"
+        } else if (/^\d+$/.test(this.input)) {
+          return parseInt(this.input)
+        } else {
+          return "'" + this.input + "'"
+        }
       }
     },
     methods: {
@@ -47,8 +56,8 @@
       @click="submit",
       v-if="inProgress"
     ) >
-    .success(v-if="good") {{ input }}
-    .error(v-if="bad") {{ input }} => {{ answer }}
+    .success(v-if="good") {{ inputForTemplate }}
+    .error(v-if="bad") {{ inputForTemplate }} => {{ answer }}
 </template>
 
 <style scoped>

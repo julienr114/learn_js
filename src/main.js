@@ -2,6 +2,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import VueHighlightJS from 'vue-highlightjs'
+
+// Tell Vue.js to use vue-highlightjs
+Vue.use(VueHighlightJS)
 
 /* eslint-disable no-new */
 new Vue({
