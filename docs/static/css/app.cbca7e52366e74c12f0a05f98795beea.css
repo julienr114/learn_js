@@ -1,0 +1,81 @@
+
+.menu {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+}
+.menu .logo {
+  height: 70px;
+  position: relative;
+  min-width: 250px;
+}
+.menu .logo .score {
+  font-size: 2em;
+  display: inline-block;
+  position: absolute;
+  bottom: 15px;
+  right: 60px;
+}
+.menu .logo img {
+  width: 50px;
+  float: right;
+  position: relative;
+}
+.finish {
+  text-align: right;
+}
+.challenge-container {
+  margin: 100px 5px 0 5px;
+  max-width: 600px;
+}
+
+code[data-v-83ccaa7c] {
+  padding: 0;
+  white-space: pre-line;
+}
+.opperation[data-v-83ccaa7c] {
+  position: relative;
+  margin-bottom: 15px;
+}
+.opperation[data-v-83ccaa7c]:last-child {
+  margin-bottom: 40px;
+}
+.state[data-v-83ccaa7c] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  padding: 7px;
+  border-top-right-radius: 5px;
+}
+.state.good[data-v-83ccaa7c] {
+  background-color: #2ecc71;
+}
+.state.bad[data-v-83ccaa7c] {
+  background-color: #c0392b;
+}
+
+code[data-v-65860a6a] {
+  font-size: 16px;
+  background-color: transparent;
+  padding-left: 0px;
+}
+.control.has-addons .input[data-v-65860a6a] {
+  width: 100%
+}
+.success[data-v-65860a6a] {
+  color: #34B6AF;
+}
+.error .answer[data-v-65860a6a] {
+  color: #FAB;
+}
+.error .arrow[data-v-65860a6a] {
+  color: #bdc3c7;
+  margin: 0 5px;
+}
+.error .correction[data-v-65860a6a] {
+  color: #E22968;
+}
+
+/*# sourceMappingURL=app.cbca7e52366e74c12f0a05f98795beea.css.map*/
