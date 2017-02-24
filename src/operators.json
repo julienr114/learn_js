@@ -206,7 +206,7 @@
 		"name": "function",
 		"level": 15,
     "variables": ["(Math.floor(Math.random() * 30000) + 1)"],
-		"template": "(function (variables) { return 'var xp = 10000;\\r\\nfunction winBattle(experience) {\\r\\npv += experience\\r\\nreturn pv;\\r\\n}\\r\\nwinBattle(' + variables[0] + ')'})",
+		"template": "(function (variables) { return 'var pv = 10000;\\r\\nfunction winBattle(experience) {\\r\\npv += experience\\r\\nreturn pv;\\r\\n}\\r\\nwinBattle(' + variables[0] + ')'})",
 		"result": "(function (variables) { return 10000 + variables[0]})"
 	}
 ]
