@@ -148,7 +148,7 @@
 	},
   {
 		"name": "Select in Array",
-		"level": 12,
+		"level": 1,
 		"variables": [["wild","code","school"], "(Math.floor(Math.random() * 2))"],
 		"template": "(function (variables) { return 'var Array = [\\'wild\\',\\'code\\',\\'school\\']\\r\\Array[' + variables[1] + ']' })",
 		"result": "(function (variables) { return variables[0][variables[1]] })"
