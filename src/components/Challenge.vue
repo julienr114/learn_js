@@ -34,8 +34,7 @@
     },
     methods: {
       submit (input) {
-
-        if(this.challenge.result === input) {
+        if(this.challenge.result.toString() === input) {
           this.state = "good"
           this.$parent.goodAnswer()
         } else {
@@ -68,9 +67,7 @@
 <style scoped>
   code {
     padding: 0;
-  }
-  pre {
-    background-color: transparent;
+    white-space: pre-line;
   }
   .opperation {
     position: relative;

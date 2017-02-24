@@ -7,7 +7,8 @@
     data () {
       return {
         randomId: 'input-' + Math.random(),
-        input: ''
+        input: '',
+        result: this.answer
       }
     },
     computed: {
@@ -25,8 +26,17 @@
           return "''"
         } else if (!isNaN(this.input)) {
           return parseInt(this.input)
+        } else if (this.input === 'true' || this.input === 'false') {
+          return this.input
         } else {
           return "'" + this.input + "'"
+        }
+      },
+      resultForTemplate () {
+        if (typeof this.result === 'string' || this.result instanceof String) {
+          return "'" + this.result + "'"
+        } else {
+          return this.result
         }
       }
     },
@@ -62,14 +72,14 @@
         span.answer {{ inputForTemplate }}
         span.icon.arrow
           i.fa.fa-long-arrow-right(aria-hidden="true")
-        span.correction {{ answer }}
+        span.correction {{ resultForTemplate }}
 </template>
 
 <style scoped>
 code {
   font-size: 16px;
   background-color: transparent;
-  padding-left: 0px; 
+  padding-left: 0px;
 }
 .control.has-addons .input {
   width: 100%

@@ -12,6 +12,6 @@ export default class Operator {
   }
 
   get result () {
-    return String(this.getResult(this.variables))
+    return this.getResult(this.variables)
   }
 }
