@@ -1,8 +1,15 @@
-# learn_js
+# Learn JS
+A very simple exercise to begin with javascript operators made with Vue.js.
 
-> A Vue.js project
+Play [here](https://julienr114.github.io/learn_js/)
 
-## Build Setup
+## Contributing
+
+### Required
+* Node.js
+* npm
+
+### Build Setup
 
 ``` bash
 # install dependencies
