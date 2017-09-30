@@ -1,4 +1,4 @@
-# Learn JS
+# Learn JS :school_satchel:
 A very simple exercise to begin with javascript operators made with Vue.js.
 
 Play [here](https://julienr114.github.io/learn_js/)
